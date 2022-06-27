@@ -15,19 +15,45 @@ body {
 }
 
 @media screen and (max-width: 714px) {
-  body {
-    background-color: aqua;
+  .App-header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 30px 3rem 0;
   }
+
+  .toDo {
+    background-color: var(--main-dark-color);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    height: 30px;
+    text-align: center;
+    width: 350px;
+  }
+
+  .insert {
+    align-items: center;
+    background-color: var(--main-dark-color);
+    border: none;
+    border-radius: 25px;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    width: 100px;
+  }
+
+  .iconInsert {
+    filter: invert(100%);
+  }
+
 }
 
 @media screen and (min-width: 715px) and (max-width: 1279px){
-  body {
-    background-color: blanchedalmond;
-  }
+
 }
 
 @media screen and (min-width: 1280px){
-  body {
-    background-color: var(--secundary-dark-color);
-  }
+
 }
