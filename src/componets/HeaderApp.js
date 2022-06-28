@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../App.css';
 
 import { MdOutlineAddTask } from 'react-icons/md'
+import ToDoContext from '../context/Context';
 
 const HeaderApp = () => {
+
+  const {
+    setTodo,
+  } = useContext(ToDoContext)
+
   return (
     <header className="App-header">
       <input
@@ -11,7 +17,7 @@ const HeaderApp = () => {
         className='toDo'
         placeholder='Nova tarefa'
       />
-      <button className='insert'><MdOutlineAddTask className='iconInsert'/></button>
+      <button className='insert'><MdOutlineAddTask className='iconInsert' /></button>
     </header>
   );
 };

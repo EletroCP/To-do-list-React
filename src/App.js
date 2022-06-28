@@ -1,12 +1,13 @@
 import './App.css';
 import HeaderApp from './componets/HeaderApp';
+import Provider from './context/Provider';
 
 function App() {
   document.title = 'To-do-List';
   return (
-    <div className="App">
+    <Provider className="App">
       <HeaderApp />
-    </div>
+    </Provider>
   );
 }
 
