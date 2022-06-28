@@ -30,7 +30,7 @@ body {
     color: white;
     height: 30px;
     text-align: center;
-    width: 350px;
+    width: 90%;
   }
 
   .insert {
@@ -41,11 +41,52 @@ body {
     display: flex;
     height: 30px;
     justify-content: center;
-    width: 100px;
+    width: 40%;
   }
 
-  .iconInsert {
+  .icon {
     filter: invert(100%);
+  }
+
+  .taskContainer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tasks {
+    border: 3px solid var(--main-dark-color);
+    border-radius: 15px;
+    color: white;
+    margin: 20px 0;
+    text-align: center;
+    width: 90%;
+  }
+
+  .todo {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 7px;
+  }
+
+  .setings {
+    gap: 5px;
+  }
+  .editTask {
+    background-color: var(--main-dark-color);
+    border: none;
+    border-radius: 15px;
+    width: 45px;
+    height: 23px;
+    margin-right: .3rem;
+  }
+
+  .deletTask {
+    background-color: var(--main-dark-color);
+    border: none;
+    border-radius: 15px;
+    width: 45px;
+    height: 23px;
   }
 
 }
