@@ -3,6 +3,7 @@ import '../App.css';
 
 import { MdOutlineAddTask } from 'react-icons/md'
 import ToDoContext from '../context/Context';
+import idGenerator from '../helpers/idGenerato';
 
 const HeaderApp = () => {
 
@@ -13,7 +14,7 @@ const HeaderApp = () => {
   } = useContext(ToDoContext)
 
   const addTask = () => {
-    setTodo((prevState) => [...prevState, newTask]);
+    setTodo((prevState) => [...prevState, { id: idGenerator(), task: newTask, disabled: true }]);
     setNewTask('');
   }
 

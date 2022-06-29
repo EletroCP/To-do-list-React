@@ -67,11 +67,17 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 5px 7px;
+    align-items: center;
   }
 
   .setings {
     gap: 5px;
   }
+
+  .task {
+    width: 60%;
+  }
+
   .editTask {
     background-color: var(--main-dark-color);
     border: none;
@@ -87,6 +93,10 @@ body {
     border-radius: 15px;
     width: 45px;
     height: 23px;
+  }
+
+  .editable {
+    box-shadow: var(--main-blue-color) 0 6px 6px -6px;
   }
 
 }
