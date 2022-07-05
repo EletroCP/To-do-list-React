@@ -15,6 +15,7 @@ body {
 }
 
 @media screen and (max-width: 714px) {
+
   .App-header {
     align-items: center;
     display: flex;
@@ -71,6 +72,11 @@ body {
   }
 
   .setings {
+    width: 50%;
+  }
+
+  .setingsContainer {
+    display: flex;
     gap: 5px;
   }
 
@@ -78,25 +84,17 @@ body {
     width: 60%;
   }
 
-  .editTask {
+  .button {
     background-color: var(--main-dark-color);
     border: none;
     border-radius: 15px;
-    width: 45px;
-    height: 23px;
-    margin-right: .3rem;
-  }
-
-  .deletTask {
-    background-color: var(--main-dark-color);
-    border: none;
-    border-radius: 15px;
-    width: 45px;
+    width: 100%;
     height: 23px;
   }
 
   .editable {
     box-shadow: var(--main-blue-color) 0 6px 6px -6px;
+    width: 45%;
   }
 
 }

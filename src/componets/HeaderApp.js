@@ -14,27 +14,37 @@ const HeaderApp = () => {
   } = useContext(ToDoContext)
 
   const addTask = () => {
-    setTodo((prevState) => [...prevState, { id: idGenerator(), task: newTask, disabled: true }]);
+    setTodo((prevState) => [...prevState, {
+      id: idGenerator(),
+      task: newTask,
+      disabled: true,
+      display: 'none',
+      textDecoration: 'none',
+    }]);
     setNewTask('');
   }
 
   return (
-    <header className="App-header">
-      <input
-        type='text'
-        className='toDo'
-        placeholder='Nova tarefa'
-        value={ newTask }
-        onChange={(({ target }) => setNewTask(target.value))}
-        aria-label='Insira nova tarefa'
-      />
-      <button 
-        className='insert'
-        aria-label='Adiciona a nova tarefa'
-        onClick={ addTask }
+    <header>
+      <form className="App-header">
+        <input
+          type='text'
+          className='toDo'
+          placeholder='Nova tarefa'
+          value={newTask}
+          onChange={(({ target }) => setNewTask(target.value))}
+          aria-label='Insira nova tarefa'
+          required
+        />
+        <button
+          className='insert'
+          aria-label='Adiciona a nova tarefa'
+          onClick={addTask}
+          disabled={ !newTask ? true : false}
         >
           <MdOutlineAddTask className='icon' />
-      </button>
+        </button>
+      </form>
     </header>
   );
 };
