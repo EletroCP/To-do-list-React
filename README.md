@@ -2,6 +2,8 @@
 ## *Work in progress
 Uma lista de tarefas para auxiliar na organização do seu dia a dia.
 
+![](./src/exempleGif.gif)
+
 # Metas a se atingir.
  - [x] Adicionar uma nova tarefa;
  - [x] Editar uma tarefa adicionada;
