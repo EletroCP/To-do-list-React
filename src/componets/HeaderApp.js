@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import '../App.css';
-
 import { MdOutlineAddTask } from 'react-icons/md'
 import ToDoContext from '../context/Context';
 import idGenerator from '../helpers/idGenerato';
+import setLocal from '../helpers/setLocalStorage';
 
 const HeaderApp = () => {
 
@@ -14,13 +14,17 @@ const HeaderApp = () => {
   } = useContext(ToDoContext)
 
   const addTask = () => {
-    setTodo((prevState) => [...prevState, {
+    setTodo((prevState) => {
+    const thisState = [...prevState, {
       id: idGenerator(),
       task: newTask,
       disabled: true,
       display: 'none',
       textDecoration: 'none',
-    }]);
+    }]
+    setLocal(thisState)
+    return thisState;
+  });
     setNewTask('');
   }
 
