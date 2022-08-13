@@ -46,7 +46,7 @@ const HeaderApp = () => {
           onClick={addTask}
           disabled={ !newTask ? true : false}
         >
-          <MdOutlineAddTask className='icon' />
+          <MdOutlineAddTask className='icon' size={ '30px' } />
         </button>
       </form>
     </header>

@@ -31,18 +31,20 @@ const TaskApp = () => {
         }
         <div className="setings" style={{ display }}>
           <div className='setingsContainer'>
-            <button className="button" onClick={() => setingsFunctions.setCompleted(id, todo, setTodo)}><FiCheckCircle className="icon" /></button>
+            <button className="button" onClick={() => setingsFunctions.setCompleted(id, todo, setTodo)}>
+              <FiCheckCircle className="icon" size={ '20px' } />
+              </button>
             <button
               className="editTask button"
               id="test"
               onClick={() => {
                 setingsFunctions.setDisabled(id, todo, setTodo)
-              }}><FiEdit className='icon' /></button>
+              }}><FiEdit className='icon' size={ '20px' } /></button>
             <button
               className="button"
               onClick={() => setingsFunctions.setDelet(id, todo, setTodo)}
             >
-              <FiDelete className='icon' />
+              <FiDelete className='icon' size={ '20px' } />
             </button>
           </div>
         </div>
